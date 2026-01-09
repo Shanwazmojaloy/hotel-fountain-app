@@ -1,0 +1,9 @@
+@echo off
+echo Starting Hotel Fountain HMS...
+echo.
+echo [1/2] Starting Web Server...
+start /b npm run dev
+timeout /t 5
+echo [2/2] Starting Public Access Tunnel...
+npx cloudflared tunnel --url http://localhost:3000
+pause

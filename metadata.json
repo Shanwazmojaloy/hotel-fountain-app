@@ -1,0 +1,5 @@
+{
+  "name": "Hotel Fountain HMS",
+  "description": "A comprehensive Hotel Management System featuring RBAC, live room status, simplified billing, and transaction tracking.",
+  "requestFramePermissions": []
+}

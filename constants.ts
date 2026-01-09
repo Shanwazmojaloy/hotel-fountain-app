@@ -1,0 +1,40 @@
+import { Room, RoomCategory, RoomStatus } from './types';
+
+export const CATEGORY_PRICES: Record<RoomCategory, number> = {
+  [RoomCategory.FOUNTAIN_DELUXE]: 3500,
+  [RoomCategory.PREMIUM_DELUXE]: 4000,
+  [RoomCategory.SUPERIOR_DELUXE]: 4500,
+  [RoomCategory.TWIN_DELUXE]: 5500,
+  [RoomCategory.ROYAL_SUITE]: 8500,
+};
+
+export const INITIAL_ROOMS: Omit<Room, 'id'>[] = [
+  { roomNumber: '301', category: RoomCategory.FOUNTAIN_DELUXE, price: 3500, status: RoomStatus.AVAILABLE },
+  { roomNumber: '302', category: RoomCategory.SUPERIOR_DELUXE, price: 4500, status: RoomStatus.AVAILABLE },
+  { roomNumber: '303', category: RoomCategory.ROYAL_SUITE, price: 8500, status: RoomStatus.AVAILABLE },
+  { roomNumber: '304', category: RoomCategory.FOUNTAIN_DELUXE, price: 3500, status: RoomStatus.AVAILABLE },
+  { roomNumber: '305', category: RoomCategory.FOUNTAIN_DELUXE, price: 3500, status: RoomStatus.AVAILABLE },
+  { roomNumber: '306', category: RoomCategory.PREMIUM_DELUXE, price: 4000, status: RoomStatus.AVAILABLE },
+  { roomNumber: '307', category: RoomCategory.PREMIUM_DELUXE, price: 4000, status: RoomStatus.AVAILABLE },
+  { roomNumber: '308', category: RoomCategory.PREMIUM_DELUXE, price: 4000, status: RoomStatus.AVAILABLE },
+  { roomNumber: '401', category: RoomCategory.FOUNTAIN_DELUXE, price: 3500, status: RoomStatus.AVAILABLE },
+  { roomNumber: '402', category: RoomCategory.PREMIUM_DELUXE, price: 4000, status: RoomStatus.AVAILABLE },
+  { roomNumber: '403', category: RoomCategory.PREMIUM_DELUXE, price: 4000, status: RoomStatus.AVAILABLE },
+  { roomNumber: '404', category: RoomCategory.PREMIUM_DELUXE, price: 4000, status: RoomStatus.AVAILABLE },
+  { roomNumber: '405', category: RoomCategory.FOUNTAIN_DELUXE, price: 3500, status: RoomStatus.AVAILABLE },
+  { roomNumber: '406', category: RoomCategory.FOUNTAIN_DELUXE, price: 3500, status: RoomStatus.AVAILABLE },
+  { roomNumber: '407', category: RoomCategory.PREMIUM_DELUXE, price: 4000, status: RoomStatus.AVAILABLE },
+  { roomNumber: '408', category: RoomCategory.PREMIUM_DELUXE, price: 4000, status: RoomStatus.AVAILABLE },
+  { roomNumber: '409', category: RoomCategory.PREMIUM_DELUXE, price: 4000, status: RoomStatus.AVAILABLE },
+  { roomNumber: '410', category: RoomCategory.FOUNTAIN_DELUXE, price: 3500, status: RoomStatus.AVAILABLE },
+  { roomNumber: '501', category: RoomCategory.FOUNTAIN_DELUXE, price: 3500, status: RoomStatus.AVAILABLE },
+  { roomNumber: '502', category: RoomCategory.TWIN_DELUXE, price: 5500, status: RoomStatus.AVAILABLE },
+  { roomNumber: '503', category: RoomCategory.TWIN_DELUXE, price: 5500, status: RoomStatus.AVAILABLE },
+  { roomNumber: '504', category: RoomCategory.TWIN_DELUXE, price: 5500, status: RoomStatus.AVAILABLE },
+  { roomNumber: '505', category: RoomCategory.FOUNTAIN_DELUXE, price: 3500, status: RoomStatus.AVAILABLE },
+  { roomNumber: '506', category: RoomCategory.FOUNTAIN_DELUXE, price: 3500, status: RoomStatus.AVAILABLE },
+  { roomNumber: '507', category: RoomCategory.TWIN_DELUXE, price: 5500, status: RoomStatus.AVAILABLE },
+  { roomNumber: '508', category: RoomCategory.TWIN_DELUXE, price: 5500, status: RoomStatus.AVAILABLE },
+  { roomNumber: '509', category: RoomCategory.PREMIUM_DELUXE, price: 4000, status: RoomStatus.AVAILABLE },
+  { roomNumber: '510', category: RoomCategory.FOUNTAIN_DELUXE, price: 3500, status: RoomStatus.AVAILABLE },
+];
