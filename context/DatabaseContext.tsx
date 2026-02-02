@@ -244,7 +244,7 @@ export const DatabaseProvider: React.FC<{ children: React.ReactNode }> = ({ chil
             // Check for authorization errors and fallback to secure RPC
             if (error.message.includes('not allowed') || (error as any).status === 403) {
                 console.log("DB_CTX: Auth Admin blocked. Falling back to Secure RPC as last resort.");
-                const { data: rpcData, error: rpcError } = await supabase.rpc('update_user_secure', {
+                const { data: _rpcData, error: rpcError } = await supabase.rpc('update_user_secure', {
                     user_id: id,
                     user_updates: updates
                 });
