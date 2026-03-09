@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Layout } from './components/Layout';
 import { Dashboard } from './pages/Dashboard';
 import { Reservations } from './pages/Reservations';
@@ -50,6 +51,7 @@ const App: React.FC = () => {
   return (
     <DatabaseProvider>
       <AppContent />
+      <SpeedInsights />
     </DatabaseProvider>
   );
 };
