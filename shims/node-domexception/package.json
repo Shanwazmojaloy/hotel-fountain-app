@@ -1,0 +1,7 @@
+{
+  "name": "node-domexception",
+  "version": "1.0.0",
+  "description": "Local shim using platform native DOMException",
+  "main": "index.js",
+  "license": "MIT"
+}
