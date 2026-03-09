@@ -240,7 +240,18 @@ export const DatabaseProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 
     const updateUser = async (id: string, updates: Partial<User>) => {
         const { error } = await supabase.from('users').update(updates).eq('id', id);
-        if (error) console.error("Error updating user:", error);
+        if (error) {
+            if ((error as any).status === 403 || error.message.includes('not allowed')) {
+                console.warn("DB_CTX: Auth Admin blocked (RLS/permission denied). Falling back to Secure RPC as last resort.", error);
+                const { error: rpcError } = await supabase.rpc('update_user_secure', {
+                    user_id: id,
+                    user_updates: updates
+                });
+                if (rpcError) console.error("Error updating user via RPC:", rpcError);
+            } else {
+                console.error("Error updating user:", error);
+            }
+        }
     };
 
     const deleteUser = async (id: string) => {
