@@ -1,0 +1,13 @@
+{
+  "name": "node-domexception",
+  "version": "1.0.0",
+  "description": "Stub that uses the platform's native DOMException instead of the deprecated package",
+  "main": "index.cjs",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.cjs"
+    }
+  },
+  "license": "MIT"
+}
