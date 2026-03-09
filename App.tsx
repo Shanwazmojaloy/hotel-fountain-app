@@ -34,7 +34,7 @@ const AppContent: React.FC = () => {
       currentUser={currentUser}
       activeTab={activeTab}
       setActiveTab={setActiveTab}
-      onLogout={() => setIsAuthenticated(false)}
+      onLogout={() => { logout(); setIsAuthenticated(false); }}
     >
       {activeTab === 'dashboard' && <Dashboard />}
       {activeTab === 'reservations' && <Reservations />}
