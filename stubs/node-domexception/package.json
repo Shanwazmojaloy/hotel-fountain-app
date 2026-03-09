@@ -1,0 +1,13 @@
+{
+  "name": "node-domexception",
+  "version": "1.0.0",
+  "description": "Stub that re-exports the platform's native DOMException (replaces deprecated node-domexception@1.0.0)",
+  "main": "index.cjs",
+  "module": "index.js",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.cjs"
+    }
+  }
+}
