@@ -94,7 +94,6 @@ export const DatabaseProvider: React.FC<{ children: React.ReactNode }> = ({ chil
                 id: 'fallback-admin',
                 name: 'System Administrator (Local)',
                 email: 'admin@hotelfountain.com',
-                password: 'admin123',
                 role: Role.ADMIN
             }]);
         }
